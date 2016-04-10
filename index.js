@@ -609,6 +609,8 @@ class Bot {
                         return res.end('Invalid body');
                     }
 
+                    console.log('------ JSON: %j', parsed);
+
                     if (!parsed.messages || !util.isArray(parsed.messages)) {
                         res.statusCode = 400;
 
