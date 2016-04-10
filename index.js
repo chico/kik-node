@@ -256,6 +256,9 @@ class Bot {
             // if we have text to match and it doesn't, give up
             // if we have a reg ex to match and it doesn't, give up
             // otherwise this is ours }:-)
+            console.dir(incoming);
+            console.log(incoming.type);
+            console.log(incoming.mention);
             if (incoming.isTextMessage()) {
                 if ((!isString && !isRegExp)
                   || (isString && incoming.body === text)) {
